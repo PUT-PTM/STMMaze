@@ -10,6 +10,10 @@
  var moveRight : KeyCode;
  var moveLeft : KeyCode;
  
+ var posx = 0;
+ var posy = 0;
+
+ 
  function Start() {
      pos = transform.position;
      tr = transform;
@@ -18,10 +22,18 @@
  function Update() {
  
      if (Input.GetKey(moveRight) && tr.position == pos) {
+     	if(posx <9)
+     	{
+     	 posx++;
          pos += Vector2.right;
+        }
      }
      else if (Input.GetKeyDown(moveLeft) && tr.position == pos) {
+     	if(posx>0)
+     	{
+     	 posx--;
          pos -= Vector2.right;
+        }
      }
      else if (Input.GetKeyDown(moveUp) && tr.position == pos) {
          pos += Vector2.up;
