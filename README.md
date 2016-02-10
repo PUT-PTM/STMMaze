@@ -12,3 +12,9 @@ For this project I am using Unity3d version 4.3.2f1
 # STM drivers
 ------
 TBD
+
+# Content
+------
+- Unity Files -> contains all files needed to open project in Unity
+- PC&Mac&Linux Executables -> download this folder and run lunch.exe to lunch game on your platform!
+- STM32 -> TBD
