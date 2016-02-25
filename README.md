@@ -22,6 +22,10 @@ The board i am using for this project is STM32F4 Discovery (before you proceed m
 - Open Espurino app and click connect > choose COM port you have previously viewed in CP.
 - Now you can program STM using espurino IDE!
 
+# Node modules
+- kbm-robot
+- serialport
+
 # Content
 ------
 - Unity Files -> contains all files needed to open project in Unity
