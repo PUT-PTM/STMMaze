@@ -2,10 +2,18 @@
 ===========
 
 Simple puzzle game project using STM32 as the player motion controller. The objective of the player is to beat the maze.
-There is only one possible path to win each round. Obstacles on the map moves with the movement of the player which makes it harder to reach the end of maze.
+There is only one possible path to win each round. Obstacles on the map moves with the movement of the player which makes it harder to reach the end of maze. STM32 communicates with node js through virtual COM port. Node js analizes data and forces system to simulate key press depending on message recived. I am using this system to move player in my maze game but feel free to adjust code to your needs :)
 
 # IDE
+Espruino Google Chrome App
 ------
+
+# Requirements - you will need these components installed if you want to run a game:
+- drivers for your STM board (see next section)
+- virtual com port driver for your board
+- node.js
+- Espruino Google Chrome App
+- chosen node modules (See Node modules Section)
 
 For this project I am using Unity3d version 4.3.2f1
 
@@ -25,6 +33,22 @@ The board i am using for this project is STM32F4 Discovery (before you proceed m
 # Node modules
 - kbm-robot
 - serialport
+
+#Step-by-step guide
+-------
+- connect your STM32 board to PC and install drivers
+- install virtual com port driver
+- lunch Espurino Chrome App
+- copy accelerometer.js content and paste in the editor
+- click connect icon and choose proper COM port
+- upload code to the board
+- now you can close Espurino IDE
+- Cd to project location
+- install node modules (type in cmd> npm install <node_module_name>)
+- run node js and lunch serialPortTest.js (type cmd> node serialPortTest.js)
+- if you have installed all dependencies and modules properly this should'nt throw any error message
+- now you can press arrow keys by moving your STM32 board!
+- lunch the game and enjoy!
 
 # Content
 ------
